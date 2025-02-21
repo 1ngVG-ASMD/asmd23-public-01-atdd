@@ -20,7 +20,40 @@ public class Calculator {
         numbers.remove(1);
     }
 
-    public int getResult(){
+    public void sub(){
+        if (numbers.size() != 2){
+            throw new IllegalStateException();
+        }
+
+        numbers.set(0, numbers.get(0) - numbers.get(1));
+        numbers.remove(1);
+    }
+
+    public void mult(){
+        if (numbers.size() != 2){
+            throw new IllegalStateException();
+        }
+
+        numbers.set(0, numbers.get(0) * numbers.get(1));
+        numbers.remove(1);
+    }
+
+    public void div(){
+        if (numbers.size() != 2){
+            throw new IllegalStateException();
+        }
+
+        if(numbers.get(0) != 0 && numbers.get(1) == 0){
+            throw new ArithmeticException("The result is indeterminate or impossible!");
+
+        }
+
+        numbers.set(0, numbers.get(0) / numbers.get(1));
+        numbers.remove(1);
+    }
+
+
+    public double getResult(){
         if (numbers.size() != 1){
             throw new IllegalStateException();
         }

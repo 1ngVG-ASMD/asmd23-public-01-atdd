@@ -18,6 +18,9 @@ public class CalculatorTest {
         calculator.enter(3);
         calculator.add();
         assertEquals(14, calculator.getResult());
+
+        calculator.enter(1);
+        calculator.mult();
         assertEquals(14, calculator.getResult());
 
         calculator.enter(3);
