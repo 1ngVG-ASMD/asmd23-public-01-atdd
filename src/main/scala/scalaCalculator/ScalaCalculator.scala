@@ -1,4 +1,4 @@
-package calculator
+package scalaCalculator
 
 import scala.collection.mutable.ListBuffer
 
@@ -13,19 +13,19 @@ class ScalaCalculator:
 
   def add(): Unit =
     numbers.size match
-      case 2 => numbers(0) = numbers(0) + numbers(1)
+      case 2 => numbers(0) = numbers.head + numbers(1)
         numbers.remove(1)
       case _ => throw new IllegalStateException("Wrong numberof parameters")
 
   def sub(): Unit =
     numbers.size match
-      case 2 => numbers(0) = numbers(0) - numbers(1)
+      case 2 => numbers(0) = numbers.head - numbers(1)
         numbers.remove(1)
       case _ => throw new IllegalStateException("Wrong numberof parameters")
 
   def mult(): Unit =
     numbers.size match
-      case 2 => numbers(0) = numbers(0) * numbers(1)
+      case 2 => numbers(0) = numbers.head * numbers(1)
         numbers.remove(1)
       case _ => throw new IllegalStateException("Wrong numberof parameters")
 
@@ -33,12 +33,12 @@ class ScalaCalculator:
     numbers.size match
       case 2 => numbers(1) match
         case 0 => throw new ArithmeticException("The result is indeterminate or impossible")
-        case _ => numbers(0) = numbers(0)/numbers(1)
+        case _ => numbers(0) = numbers.head /numbers(1)
           numbers.remove(1)
           
       case _ => throw new IllegalStateException("Wrong number of parameters")
       
   def getResult: Double =
     numbers.size match
-      case 1 => numbers(0)
+      case 1 => numbers.head
       case _ => throw new IllegalStateException("The calculation didn't produce a result")

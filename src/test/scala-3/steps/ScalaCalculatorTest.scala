@@ -1,11 +1,13 @@
-package calculator
+package steps
 
 import org.junit.jupiter.api.Assertions.{assertEquals, assertThrows}
 import org.junit.jupiter.api.Test
+import scalaCalculator.ScalaCalculator
 
 class ScalaCalculatorTest:
 
   val calculator = new ScalaCalculator()
+
   @Test
   def acceptanceAddTest(): Unit =
     calculator.enter(5)
