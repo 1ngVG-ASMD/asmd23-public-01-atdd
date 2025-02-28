@@ -1,4 +1,4 @@
-package steps
+package scalaCalculator
 
 import org.junit.jupiter.api.Assertions.{assertEquals, assertThrows}
 import org.junit.jupiter.api.Test

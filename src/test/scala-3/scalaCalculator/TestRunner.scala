@@ -1,4 +1,4 @@
-package steps
+package scalaCalculator
 
 import io.cucumber.junit.{Cucumber, CucumberOptions}
 import org.junit.runner.RunWith
